@@ -11,6 +11,8 @@ import os
 nltk_data_path = os.path.join(os.getcwd(), "nltk_data")
 os.makedirs(nltk_data_path, exist_ok=True)
 
+nltk.data.path.append(nltk_data_path)
+
 # Download punkt and stopwords explicitly to local directory
 try:
     nltk.data.find('tokenizers/punkt')
